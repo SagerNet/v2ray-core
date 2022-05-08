@@ -146,6 +146,7 @@ func (c *Client) Process(ctx context.Context, link *transport.Link, dialer inter
 		if c.client == nil {
 			client, err := c.connect(ctx, dialer)
 			if err != nil {
+				c.Unlock()
 				return err
 			}
 			connElem := net.AddConnection(client)
@@ -204,6 +205,7 @@ func (c *Client) ProcessConn(ctx context.Context, conn net.Conn, dialer internet
 		if c.client == nil {
 			client, err := c.connect(ctx, dialer)
 			if err != nil {
+				c.Unlock()
 				return err
 			}
 			connElem := net.AddConnection(client)
