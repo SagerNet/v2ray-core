@@ -332,7 +332,7 @@ and provides the expected connection behavior of the client
         "vnext": ...,
         "packetEncoding": "[none/packet/xudp]"
         // none: disabled
-        // packet: requires v2ray/v2ray-core v5.0.2+ or SagerNet/v2ray-core
+        // packet: requires v2fly/v2ray-core v5.0.2+ or SagerNet/v2ray-core
         // xudp: requires XTLS/Xray-core or SagerNet/v2ray-core
       },
       "mux": {
